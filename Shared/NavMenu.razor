@@ -1,0 +1,40 @@
+﻿<div class="top-row pl-4 navbar navbar-dark">
+    <a class="navbar-brand" href="">Projetos</a>
+    <button class="navbar-toggler">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+</div>
+
+<div class="">
+    <MudPaper Width="250px" Class="py-3" Square="true">
+        <MudNavMenu>
+            <MudText Typo="Typo.h6" Class="px-4">Gestão de Projetos</MudText>
+            <MudDivider Class="my-2" />
+            <MudNavLink Href="/dashboard">Dashboard</MudNavLink>
+            <MudNavGroup Title="Listas" Expanded="true">
+                <MudNavLink Href="/cliente">Clientes</MudNavLink>
+                <MudNavLink Href="/projeto">Projetos</MudNavLink>
+                <MudNavLink Href="/medida">Medidas</MudNavLink>
+                <MudNavLink Href="/estados">Estados</MudNavLink>
+                <MudNavLink Href="/contactos">Contactos</MudNavLink>
+            </MudNavGroup>
+            <MudNavGroup Title="Utilitários" Expanded="true">
+                <MudNavLink Href="/calendario">Calendário</MudNavLink>
+                <MudNavLink Href="/listadetarefa">Lista de Tarefas</MudNavLink>
+                <MudNavLink Href="/senha">Senhas</MudNavLink>
+            </MudNavGroup>
+            <MudNavGroup Title="Tabelas" Expanded="false">
+                <MudNavLink Href="/tcliente">Clientes</MudNavLink>
+                <MudNavLink Href="/tprojeto">Projetos</MudNavLink>
+                <MudNavLink Href="/ttarefa">Tarefas</MudNavLink>
+                <MudNavLink Href="/tchat">Chat</MudNavLink>
+            </MudNavGroup>
+            <MudNavLink Href="/utilizadores">Utilizadores</MudNavLink>
+            <MudNavLink Href="/definicoes">Definições</MudNavLink>
+        </MudNavMenu>
+    </MudPaper>
+</div>
+
+@code {
+
+}
