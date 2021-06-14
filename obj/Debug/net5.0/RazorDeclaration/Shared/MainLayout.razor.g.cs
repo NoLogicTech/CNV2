@@ -13,77 +13,77 @@ namespace CNV2.Shared
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Components;
 #nullable restore
-#line 1 "C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\_Imports.razor"
+#line 1 "D:\Repositorios\CNV2\_Imports.razor"
 using System.Net.Http;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\_Imports.razor"
+#line 2 "D:\Repositorios\CNV2\_Imports.razor"
 using Microsoft.AspNetCore.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\_Imports.razor"
+#line 3 "D:\Repositorios\CNV2\_Imports.razor"
 using Microsoft.AspNetCore.Components.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\_Imports.razor"
+#line 4 "D:\Repositorios\CNV2\_Imports.razor"
 using Microsoft.AspNetCore.Components.Forms;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\_Imports.razor"
+#line 5 "D:\Repositorios\CNV2\_Imports.razor"
 using Microsoft.AspNetCore.Components.Routing;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 6 "C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\_Imports.razor"
+#line 6 "D:\Repositorios\CNV2\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 7 "C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\_Imports.razor"
+#line 7 "D:\Repositorios\CNV2\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web.Virtualization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 8 "C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\_Imports.razor"
+#line 8 "D:\Repositorios\CNV2\_Imports.razor"
 using Microsoft.JSInterop;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 9 "C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\_Imports.razor"
+#line 9 "D:\Repositorios\CNV2\_Imports.razor"
 using CNV2;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 10 "C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\_Imports.razor"
+#line 10 "D:\Repositorios\CNV2\_Imports.razor"
 using CNV2.Shared;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 11 "C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\_Imports.razor"
+#line 11 "D:\Repositorios\CNV2\_Imports.razor"
 using MudBlazor;
 
 #line default
@@ -97,16 +97,69 @@ using MudBlazor;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 20 "C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\Shared\MainLayout.razor"
+#line 20 "D:\Repositorios\CNV2\Shared\MainLayout.razor"
        
-
-
     MudTheme ADN = new MudTheme()
     {
         Palette = new Palette()
         {
+            Primary = "#2878f7",
+            AppbarBackground = "#FFFFFF",
+        },
+
+        Typography = new Typography()
+        {
+            Default = new Default()
+            {
+                FontFamily = new[] { "Montserrat", "Roboto", "Helvetica", "Arial", "sans-serif" },
+                FontSize = ".875rem",
+                FontWeight = 400,
+                LineHeight = 1.43,
+                LetterSpacing = ".01071em"
+            }
+        }
+
+    };
+
+    MudTheme DarkMode = new MudTheme()
+    {
+        Palette = new Palette()
+        {
+            Black = "#27272f",
+            Background = "#32333d",
+            BackgroundGrey = "#27272f",
+            Surface = "#373740",
+            DrawerBackground = "#27272f",
+            DrawerText = "rgba(255,255,255, 0.50)",
+            DrawerIcon = "rgba(255,255,255, 0.50)",
+            AppbarBackground = "#27272f",
+            AppbarText = "rgba(255,255,255, 0.10)",
+            TextPrimary = "#FFFFFF",
+            TextSecondary = "rgba(255,255,255, 0.50)",
+            ActionDefault = "#adadb1",
+            ActionDisabled = "rgba(255,255,255, 0.26)",
+            ActionDisabledBackground = "rgba(255,255,255, 0.12)",
+            Divider = "rgba(255,255,255, 0.12)",
+            DividerLight = "rgba(255,255,255, 0.06)",
+            TableLines = "rgba(255,255,255, 0.12)",
+            LinesDefault = "rgba(255,255,255, 0.12)",
+            LinesInputs = "rgba(255,255,255, 0.3)",
+            TextDisabled = "rgba(255,255,255, 0.2)",
             Primary = "#2878f7"
         },
+
+        Typography = new Typography()
+        {
+            Default = new Default()
+            {
+                FontFamily = new[] { "Montserrat", "Roboto", "Helvetica", "Arial", "sans-serif" },
+                FontSize = ".875rem",
+                FontWeight = 400,
+                LineHeight = 1.43,
+                LetterSpacing = ".01071em"
+            }
+        }
+
 
 
     };

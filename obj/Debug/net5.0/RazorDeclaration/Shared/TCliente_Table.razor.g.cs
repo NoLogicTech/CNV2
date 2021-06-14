@@ -13,78 +13,92 @@ namespace CNV2.Shared
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Components;
 #nullable restore
-#line 1 "C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\_Imports.razor"
+#line 1 "D:\Repositorios\CNV2\_Imports.razor"
 using System.Net.Http;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\_Imports.razor"
+#line 2 "D:\Repositorios\CNV2\_Imports.razor"
 using Microsoft.AspNetCore.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\_Imports.razor"
+#line 3 "D:\Repositorios\CNV2\_Imports.razor"
 using Microsoft.AspNetCore.Components.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\_Imports.razor"
+#line 4 "D:\Repositorios\CNV2\_Imports.razor"
 using Microsoft.AspNetCore.Components.Forms;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\_Imports.razor"
+#line 5 "D:\Repositorios\CNV2\_Imports.razor"
 using Microsoft.AspNetCore.Components.Routing;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 6 "C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\_Imports.razor"
+#line 6 "D:\Repositorios\CNV2\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 7 "C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\_Imports.razor"
+#line 7 "D:\Repositorios\CNV2\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web.Virtualization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 8 "C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\_Imports.razor"
+#line 8 "D:\Repositorios\CNV2\_Imports.razor"
 using Microsoft.JSInterop;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 9 "C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\_Imports.razor"
+#line 9 "D:\Repositorios\CNV2\_Imports.razor"
 using CNV2;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 10 "C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\_Imports.razor"
+#line 10 "D:\Repositorios\CNV2\_Imports.razor"
 using CNV2.Shared;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 11 "C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\_Imports.razor"
+#line 11 "D:\Repositorios\CNV2\_Imports.razor"
 using MudBlazor;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 1 "D:\Repositorios\CNV2\Shared\TCliente_Table.razor"
+using System.Net.Http.Json;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 2 "D:\Repositorios\CNV2\Shared\TCliente_Table.razor"
+using MudBlazor.Examples.Data.Models;
 
 #line default
 #line hidden
@@ -97,19 +111,40 @@ using MudBlazor;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 29 "C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\Shared\TCliente_Table.razor"
+#line 31 "D:\Repositorios\CNV2\Shared\TCliente_Table.razor"
        
-    string[] headings = { "ID", "NIPC", "ERP ID", "Nome", "" };
-    string[] rows = {
-@"1,508508180,000,Cascata de Números - Consultores Lda.",
-@"2,247270431,560,Miguel João Alves Correia",
-@"3,515262132,589,NoLogTech Lda",
+    private bool dense = true;
+    private bool hover = true;
+    private bool striped = false;
+    private bool bordered = false;
+    private string searchString = "";
+    private Element selectedItem = null;
+    private HashSet<Element> selectedItems = new HashSet<Element>();
 
-};
+    private IEnumerable<Element> Elements = new List<Element>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        Elements = await httpClient.GetFromJsonAsync<List<Element>>("https://mudblazor.com/webapi/periodictable");
+    }
+
+    private bool FilterFunc(Element element)
+    {
+        if (string.IsNullOrWhiteSpace(searchString))
+            return true;
+        if (element.Sign.Contains(searchString, StringComparison.OrdinalIgnoreCase))
+            return true;
+        if (element.Name.Contains(searchString, StringComparison.OrdinalIgnoreCase))
+            return true;
+        if ($"{element.Number} {element.Position} {element.Molar}".Contains(searchString))
+            return true;
+        return false;
+    }
 
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private HttpClient httpClient { get; set; }
     }
 }
 #pragma warning restore 1591
