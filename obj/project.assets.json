@@ -1723,27 +1723,33 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\mcorr\\.nuget\\packages\\": {}
+    "C:\\Users\\NoLogicTech\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Repositorios\\CNV2\\CNV2.csproj",
+      "projectUniqueName": "C:\\Users\\NoLogicTech\\Documents\\Repos\\ASerio\\CNV2\\CNV2.csproj",
       "projectName": "CNV2",
-      "projectPath": "D:\\Repositorios\\CNV2\\CNV2.csproj",
-      "packagesPath": "C:\\Users\\mcorr\\.nuget\\packages\\",
-      "outputPath": "D:\\Repositorios\\CNV2\\obj\\",
+      "projectPath": "C:\\Users\\NoLogicTech\\Documents\\Repos\\ASerio\\CNV2\\CNV2.csproj",
+      "packagesPath": "C:\\Users\\NoLogicTech\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\NoLogicTech\\Documents\\Repos\\ASerio\\CNV2\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\mcorr\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\NoLogicTech\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "D:\\Programas\\Syncfusion\\WinUI\\18.3.0.35\\NuGetPackages": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
