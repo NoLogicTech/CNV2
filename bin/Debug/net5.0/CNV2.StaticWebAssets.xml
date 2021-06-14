@@ -1,5 +1,18 @@
 ﻿<StaticWebAssets Version="1.0">
   <ContentRoot BasePath="_content/MudBlazor" Path="C:\Users\NoLogicTech\.nuget\packages\mudblazor\5.0.11\build\..\staticwebassets\" />
+  <ContentRoot BasePath="_content/Syncfusion.Blazor.Calendars" Path="C:\Users\NoLogicTech\.nuget\packages\syncfusion.blazor.calendars\19.1.0.67\build\..\staticwebassets\" />
+  <ContentRoot BasePath="_content/Syncfusion.Blazor.Core" Path="C:\Users\NoLogicTech\.nuget\packages\syncfusion.blazor.core\19.1.0.67\build\..\staticwebassets\" />
+  <ContentRoot BasePath="_content/Syncfusion.Blazor.Data" Path="C:\Users\NoLogicTech\.nuget\packages\syncfusion.blazor.data\19.1.0.67\build\..\staticwebassets\" />
+  <ContentRoot BasePath="_content/Syncfusion.Blazor.DropDowns" Path="C:\Users\NoLogicTech\.nuget\packages\syncfusion.blazor.dropdowns\19.1.0.67\build\..\staticwebassets\" />
+  <ContentRoot BasePath="_content/Syncfusion.Blazor.Inputs" Path="C:\Users\NoLogicTech\.nuget\packages\syncfusion.blazor.inputs\19.1.0.67\build\..\staticwebassets\" />
+  <ContentRoot BasePath="_content/Syncfusion.Blazor.Layouts" Path="C:\Users\NoLogicTech\.nuget\packages\syncfusion.blazor.layouts\19.1.0.67\build\..\staticwebassets\" />
+  <ContentRoot BasePath="_content/Syncfusion.Blazor.Lists" Path="C:\Users\NoLogicTech\.nuget\packages\syncfusion.blazor.lists\19.1.0.67\build\..\staticwebassets\" />
+  <ContentRoot BasePath="_content/Syncfusion.Blazor.Navigations" Path="C:\Users\NoLogicTech\.nuget\packages\syncfusion.blazor.navigations\19.1.0.67\build\..\staticwebassets\" />
+  <ContentRoot BasePath="_content/Syncfusion.Blazor.Popups" Path="C:\Users\NoLogicTech\.nuget\packages\syncfusion.blazor.popups\19.1.0.67\build\..\staticwebassets\" />
+  <ContentRoot BasePath="_content/Syncfusion.Blazor.Schedule" Path="C:\Users\NoLogicTech\.nuget\packages\syncfusion.blazor.schedule\19.1.0.67\build\..\staticwebassets\" />
+  <ContentRoot BasePath="_content/Syncfusion.Blazor.Spinner" Path="C:\Users\NoLogicTech\.nuget\packages\syncfusion.blazor.spinner\19.1.0.67\build\..\staticwebassets\" />
+  <ContentRoot BasePath="_content/Syncfusion.Blazor.SplitButtons" Path="C:\Users\NoLogicTech\.nuget\packages\syncfusion.blazor.splitbuttons\19.1.0.67\build\..\staticwebassets\" />
+  <ContentRoot BasePath="_content/Syncfusion.Blazor.Themes" Path="C:\Users\NoLogicTech\.nuget\packages\syncfusion.blazor.themes\19.1.0.67\build\..\staticwebassets\" />
   <ContentRoot BasePath="/" Path="C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\obj\Debug\net5.0\scopedcss\bundle\" />
   <ContentRoot BasePath="/Identity" Path="C:\Users\NoLogicTech\.nuget\packages\microsoft.aspnetcore.identity.ui\5.0.5\staticwebassets\V4\" />
 </StaticWebAssets>

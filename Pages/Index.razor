@@ -1,7 +1,118 @@
 @page "/"
 
-<h1>Hello, world!</h1>
+<SfDashboardLayout CellSpacing="@(new double[]{20 ,20 })" Columns="5">
+    <DashboardLayoutPanels>
+        <DashboardLayoutPanel SizeX=1 SizeY=2 Column=0>
+            <ContentTemplate>
+                <div style="text-align: start;">
+                    <SfTreeView TValue="MusicAlbum" ShowCheckBox="true" AutoCheck="true">
+                        <TreeViewFieldsSettings TValue="MusicAlbum" Id="Id" DataSource="@Albums" Text="Name"
+                            ParentID="ParentId" HasChildren="HasChild" Expanded="Expanded" IsChecked="IsChecked">
+                        </TreeViewFieldsSettings>
+                    </SfTreeView>
+                </div>
+            </ContentTemplate>
+        </DashboardLayoutPanel>
+        <DashboardLayoutPanel SizeX=2 SizeY=2 Column=1>
+            <ContentTemplate>
+                <div>
+                    <SfSchedule TValue=AppointmentData></SfSchedule>
+                </div>
+            </ContentTemplate>
+        </DashboardLayoutPanel>
 
-Welcome to your new app.
+    </DashboardLayoutPanels>
+</SfDashboardLayout>
 
-<SurveyPrompt Title="How is Blazor working for you?" />
+<style>
+    .e-panel-content {
+        text-align: center;
+        margin-top: 10px;
+    }
+</style>
+
+@code {
+    public class MusicAlbum
+    {
+        public int Id { get; set; }
+        public int? ParentId { get; set; }
+        public string Name { get; set; }
+        public bool Expanded { get; set; }
+        public bool? IsChecked { get; set; }
+        public bool HasChild { get; set; }
+    }
+    List<MusicAlbum> Albums = new List<MusicAlbum>();
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        Albums.Add(new MusicAlbum
+        {
+            Id = 1,
+            Name = "Discover Music",
+            HasChild = true,
+        });
+        Albums.Add(new MusicAlbum
+        {
+            Id = 2,
+            ParentId = 1,
+            Name = "Hot Singles"
+        });
+        Albums.Add(new MusicAlbum
+        {
+            Id = 3,
+            ParentId = 1,
+            Name = "Rising Artists"
+        });
+        Albums.Add(new MusicAlbum
+        {
+            Id = 4,
+            ParentId = 1,
+            Name = "Live Music"
+        });
+        Albums.Add(new MusicAlbum
+        {
+            Id = 14,
+            HasChild = true,
+            Name = "MP3 Albums",
+            Expanded = true,
+            IsChecked = true
+        });
+        Albums.Add(new MusicAlbum
+        {
+            Id = 15,
+            ParentId = 14,
+            Name = "Rock"
+        });
+        Albums.Add(new MusicAlbum
+        {
+            Id = 16,
+            Name = "Gospel",
+            ParentId = 14,
+        });
+        Albums.Add(new MusicAlbum
+        {
+            Id = 17,
+            ParentId = 14,
+            Name = "Latin Music"
+        });
+        Albums.Add(new MusicAlbum
+        {
+            Id = 18,
+            ParentId = 14,
+            Name = "Jazz"
+        });
+    }
+    public class AppointmentData
+    {
+        public int Id { get; set; }
+        public string Subject { get; set; }
+        public string Location { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+        public string Description { get; set; }
+        public bool IsAllDay { get; set; }
+        public string RecurrenceRule { get; set; }
+        public string RecurrenceException { get; set; }
+        public Nullable<int> RecurrenceID { get; set; }
+    }
+}

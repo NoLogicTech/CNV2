@@ -16,7 +16,7 @@ using Microsoft.Extensions.Hosting;
 using CNV2.Areas.Identity;
 using CNV2.Data;
 using MudBlazor.Services;
-
+using Syncfusion.Blazor;
 
 
 namespace CNV2
@@ -46,11 +46,15 @@ namespace CNV2
             services.AddSingleton<WeatherForecastService>();
             services.AddMudServices();
             services.AddHttpClient();
+            services.AddSyncfusionBlazor();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+
+            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("NDU5NDEwQDMxMzkyZTMxMmUzMEFucm56VndJMzFvVjVNMXlLaE1jZlJFQm5VSERRYjNXQkRaMWxnN0ZLMVU9");
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

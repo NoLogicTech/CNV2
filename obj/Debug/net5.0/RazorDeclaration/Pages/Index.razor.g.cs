@@ -89,6 +89,41 @@ using MudBlazor;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 12 "C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\_Imports.razor"
+using Syncfusion.Blazor;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 13 "C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\_Imports.razor"
+using Syncfusion.Blazor.Calendars;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 14 "C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\_Imports.razor"
+using Syncfusion.Blazor.Layouts;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 15 "C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\_Imports.razor"
+using Syncfusion.Blazor.Navigations;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 16 "C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\_Imports.razor"
+using Syncfusion.Blazor.Schedule;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/")]
     public partial class Index : Microsoft.AspNetCore.Components.ComponentBase
     {
@@ -97,6 +132,96 @@ using MudBlazor;
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 34 "C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\Pages\Index.razor"
+       
+    public class MusicAlbum
+    {
+        public int Id { get; set; }
+        public int? ParentId { get; set; }
+        public string Name { get; set; }
+        public bool Expanded { get; set; }
+        public bool? IsChecked { get; set; }
+        public bool HasChild { get; set; }
+    }
+    List<MusicAlbum> Albums = new List<MusicAlbum>();
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        Albums.Add(new MusicAlbum
+        {
+            Id = 1,
+            Name = "Discover Music",
+            HasChild = true,
+        });
+        Albums.Add(new MusicAlbum
+        {
+            Id = 2,
+            ParentId = 1,
+            Name = "Hot Singles"
+        });
+        Albums.Add(new MusicAlbum
+        {
+            Id = 3,
+            ParentId = 1,
+            Name = "Rising Artists"
+        });
+        Albums.Add(new MusicAlbum
+        {
+            Id = 4,
+            ParentId = 1,
+            Name = "Live Music"
+        });
+        Albums.Add(new MusicAlbum
+        {
+            Id = 14,
+            HasChild = true,
+            Name = "MP3 Albums",
+            Expanded = true,
+            IsChecked = true
+        });
+        Albums.Add(new MusicAlbum
+        {
+            Id = 15,
+            ParentId = 14,
+            Name = "Rock"
+        });
+        Albums.Add(new MusicAlbum
+        {
+            Id = 16,
+            Name = "Gospel",
+            ParentId = 14,
+        });
+        Albums.Add(new MusicAlbum
+        {
+            Id = 17,
+            ParentId = 14,
+            Name = "Latin Music"
+        });
+        Albums.Add(new MusicAlbum
+        {
+            Id = 18,
+            ParentId = 14,
+            Name = "Jazz"
+        });
+    }
+    public class AppointmentData
+    {
+        public int Id { get; set; }
+        public string Subject { get; set; }
+        public string Location { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+        public string Description { get; set; }
+        public bool IsAllDay { get; set; }
+        public string RecurrenceRule { get; set; }
+        public string RecurrenceException { get; set; }
+        public Nullable<int> RecurrenceID { get; set; }
+    }
+
+#line default
+#line hidden
+#nullable disable
     }
 }
 #pragma warning restore 1591

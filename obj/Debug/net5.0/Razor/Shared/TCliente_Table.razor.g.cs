@@ -87,6 +87,41 @@ using MudBlazor;
 #line hidden
 #nullable disable
 #nullable restore
+#line 12 "C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\_Imports.razor"
+using Syncfusion.Blazor;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 13 "C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\_Imports.razor"
+using Syncfusion.Blazor.Calendars;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 14 "C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\_Imports.razor"
+using Syncfusion.Blazor.Layouts;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 15 "C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\_Imports.razor"
+using Syncfusion.Blazor.Navigations;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 16 "C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\_Imports.razor"
+using Syncfusion.Blazor.Schedule;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 1 "C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\Shared\TCliente_Table.razor"
 using System.Net.Http.Json;
 
