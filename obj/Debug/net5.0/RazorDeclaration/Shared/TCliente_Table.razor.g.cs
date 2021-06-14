@@ -89,7 +89,7 @@ using MudBlazor;
 #line default
 #line hidden
 #nullable disable
-    public partial class MainLayout : LayoutComponentBase
+    public partial class TCliente_Table : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -97,21 +97,15 @@ using MudBlazor;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 20 "C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\Shared\MainLayout.razor"
+#line 29 "C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\Shared\TCliente_Table.razor"
        
+    string[] headings = { "ID", "NIPC", "ERP ID", "Nome", "" };
+    string[] rows = {
+@"1,508508180,000,Cascata de Números - Consultores Lda.",
+@"2,247270431,560,Miguel João Alves Correia",
+@"3,515262132,589,NoLogTech Lda",
 
-
-    MudTheme ADN = new MudTheme()
-    {
-        Palette = new Palette()
-        {
-            Primary = "#2878f7"
-        },
-
-
-    };
-
-
+};
 
 #line default
 #line hidden

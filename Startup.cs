@@ -17,6 +17,8 @@ using CNV2.Areas.Identity;
 using CNV2.Data;
 using MudBlazor.Services;
 
+
+
 namespace CNV2
 {
     public class Startup
@@ -43,6 +45,7 @@ namespace CNV2
             services.AddDatabaseDeveloperPageExceptionFilter();
             services.AddSingleton<WeatherForecastService>();
             services.AddMudServices();
+            services.AddHttpClient();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -96,28 +96,6 @@ using MudBlazor;
         {
         }
         #pragma warning restore 1998
-#nullable restore
-#line 38 "C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\Shared\NavMenu.razor"
-       
-    MudTheme MyCustomTheme = new MudTheme()
-    {
-        Palette = new Palette()
-        {
-            Primary = Colors.Blue.Default,
-            Secondary = Colors.Green.Accent4,
-            AppbarBackground = Colors.Red.Default,
-        },
-
-        LayoutProperties = new LayoutProperties()
-        {
-            DrawerWidthLeft = "260px",
-            DrawerWidthRight = "300px"
-        }
-    };
-
-#line default
-#line hidden
-#nullable disable
     }
 }
 #pragma warning restore 1591

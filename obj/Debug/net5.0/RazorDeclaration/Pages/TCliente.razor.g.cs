@@ -4,7 +4,7 @@
 #pragma warning disable 0649
 #pragma warning disable 0169
 
-namespace CNV2.Shared
+namespace CNV2.Pages
 {
     #line hidden
     using System;
@@ -89,7 +89,22 @@ using MudBlazor;
 #line default
 #line hidden
 #nullable disable
-    public partial class MainLayout : LayoutComponentBase
+#nullable restore
+#line 2 "C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\Pages\TCliente.razor"
+using System.Text.RegularExpressions;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 3 "C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\Pages\TCliente.razor"
+using System.ComponentModel.DataAnnotations;
+
+#line default
+#line hidden
+#nullable disable
+    [Microsoft.AspNetCore.Components.RouteAttribute("/tcliente")]
+    public partial class TCliente : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -97,21 +112,36 @@ using MudBlazor;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 20 "C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\Shared\MainLayout.razor"
+#line 28 "C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\Pages\TCliente.razor"
        
+    bool success;
+    string[] errors = { };
+    MudTextField<string> pwField1;
+    MudForm form;
 
-
-    MudTheme ADN = new MudTheme()
+    private IEnumerable<string> PasswordStrength(string pw)
     {
-        Palette = new Palette()
+        if (string.IsNullOrWhiteSpace(pw))
         {
-            Primary = "#2878f7"
-        },
+            yield return "Password is required!";
+            yield break;
+        }
+        if (pw.Length < 8)
+            yield return "Password must be at least of length 8";
+        if (!Regex.IsMatch(pw, @"[A-Z]"))
+            yield return "Password must contain at least one capital letter";
+        if (!Regex.IsMatch(pw, @"[a-z]"))
+            yield return "Password must contain at least one lowercase letter";
+        if (!Regex.IsMatch(pw, @"[0-9]"))
+            yield return "Password must contain at least one digit";
+    }
 
-
-    };
-
-
+    private string PasswordMatch(string arg)
+    {
+        if (pwField1.Value != arg)
+            return "Passwords don't match";
+        return null;
+    }
 
 #line default
 #line hidden

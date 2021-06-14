@@ -107,3 +107,9 @@ C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\obj\Debug\net5.0\CNV2.dll
 C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\obj\Debug\net5.0\ref\CNV2.dll
 C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\obj\Debug\net5.0\CNV2.pdb
 C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\obj\Debug\net5.0\CNV2.genruntimeconfig.cache
+C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\obj\Debug\net5.0\RazorDeclaration\Shared\TopMenu.razor.g.cs
+C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\obj\Debug\net5.0\Razor\Shared\TopMenu.razor.g.cs
+C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\obj\Debug\net5.0\RazorDeclaration\Pages\TCliente.razor.g.cs
+C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\obj\Debug\net5.0\Razor\Pages\TCliente.razor.g.cs
+C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\obj\Debug\net5.0\RazorDeclaration\Shared\TCliente_Table.razor.g.cs
+C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\obj\Debug\net5.0\Razor\Shared\TCliente_Table.razor.g.cs

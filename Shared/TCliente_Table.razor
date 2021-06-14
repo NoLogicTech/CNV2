@@ -1,0 +1,37 @@
+<MudSimpleTable Style="overflow-x: auto;">
+    <thead>
+        <tr>
+            @foreach (var h in headings)
+            {
+                <th>@h</th>
+            }
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var row in rows)
+        {
+            <tr>
+                
+                @foreach (var x in row.Split(","))
+                {
+                    <td>@x</td>
+                }
+<td>
+                    <MudIconButton Color="Color.Error" Icon="@Icons.Material.Filled.Delete" />
+
+                    <MudIconButton Color="Color.Primary" Icon="@Icons.Material.Filled.Edit" />
+                </td>
+            </tr>
+
+        }
+    </tbody>
+</MudSimpleTable>
+@code {
+    string[] headings = { "ID", "NIPC", "ERP ID", "Nome", "" };
+    string[] rows = {
+@"1,508508180,000,Cascata de Números - Consultores Lda.",
+@"2,247270431,560,Miguel João Alves Correia",
+@"3,515262132,589,NoLogTech Lda",
+
+};
+}

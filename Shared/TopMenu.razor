@@ -1,0 +1,53 @@
+<MudAppBar Elevation="1" Style="background-color: white;" Fixed="true">
+    <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Primary" Edge="Edge.Start"
+        OnClick="@((e) => DrawerToggle())" />
+
+    <MudItem xs="12" sm="6" md="4" align-start>
+
+        <MudAutocomplete T="string" @bind-Value="value1" SearchFunc="@MainSearch"
+            ResetValueOnEmptyText="@resetValueOnEmptyText" CoerceText="@coerceText" CoerceValue="@coerceValue" FullWidth
+            Placeholder="Pesquisar clientes/projetos" style="margin-bottom: 15px;" />
+
+    </MudItem>
+
+    <MudAppBarSpacer />
+    <LoginDisplay />
+    <a href="https://docs.microsoft.com/aspnet/" target="_blank">About</a>
+</MudAppBar>
+
+<MudDrawer @bind-Open="_drawerOpen" Elevation="2">
+    <MudDrawerHeader>
+        <MudText Typo="Typo.h5" Class="mt-1">ADN | Projetos</MudText>
+    </MudDrawerHeader>
+    <NavMenu />
+</MudDrawer>
+
+@code {
+    bool _drawerOpen = true;
+
+    void DrawerToggle()
+    {
+        _drawerOpen = !_drawerOpen;
+    }
+    private bool resetValueOnEmptyText = false;
+    private bool coerceText = false;
+    private bool coerceValue = false;
+    private string value1;
+    private string[] states =
+    {
+"Mil Possibilidades | SI Inovação | 22769",
+"Luís Leal & Filhos | SI Inovação | 22759"
+};
+
+
+    private async Task<IEnumerable<string>> MainSearch(string value)
+    {
+        // In real life use an asynchronous function for fetching data from an api.
+        await Task.Delay(5);
+
+        // if text is null or empty, don't return values (drop-down will not open)
+        if (string.IsNullOrEmpty(value))
+            return new string[0];
+        return states.Where(x => x.Contains(value, StringComparison.InvariantCultureIgnoreCase));
+    }
+}
