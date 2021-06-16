@@ -15,7 +15,14 @@
                 TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
             <TreeGridColumn Field="Progress" HeaderText="" Width="60"
                 TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
-            <TreeGridColumn Field="Priority" HeaderText="" Width="60"></TreeGridColumn>
+            <TreeGridColumn HeaderText="Prioridade" Width="80">
+                <Template>
+
+
+                    <MudChip Color="Color.Error">Error</MudChip>
+
+                </Template>
+            </TreeGridColumn>
         </TreeGridColumns>
     </SfTreeGrid>
 </MudPaper>

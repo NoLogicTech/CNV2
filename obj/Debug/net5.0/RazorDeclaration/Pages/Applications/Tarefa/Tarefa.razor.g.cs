@@ -146,7 +146,7 @@ using Syncfusion.Blazor.TreeGrid;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 23 "C:\Users\mcorr\OneDrive\Documentos\Book\CNV2\Pages\Applications\Tarefa\Tarefa.razor"
+#line 30 "C:\Users\mcorr\OneDrive\Documentos\Book\CNV2\Pages\Applications\Tarefa\Tarefa.razor"
        
     public List<TreeData> TreeGridData { get; set; }
     protected override void OnInitialized()
