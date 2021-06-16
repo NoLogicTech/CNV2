@@ -4,7 +4,7 @@
 #pragma warning disable 0649
 #pragma warning disable 0169
 
-namespace CNV2.Shared
+namespace CNV2.Pages.Applications.Tarefa
 {
     #line hidden
     using System;
@@ -131,87 +131,13 @@ using Syncfusion.Blazor.TreeGrid;
 #line default
 #line hidden
 #nullable disable
-    public partial class MainLayout : LayoutComponentBase
+    public partial class MudLista : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
         {
         }
         #pragma warning restore 1998
-#nullable restore
-#line 20 "C:\Users\mcorr\OneDrive\Documentos\Book\CNV2\Shared\MainLayout.razor"
-       
-    MudTheme ADN = new MudTheme()
-    {
-        Palette = new Palette()
-        {
-            Primary = "#2878f7",
-            AppbarBackground = "#FFFFFF",
-            Background = "rgba(246,246,246, 1)"
-        },
-
-        Typography = new Typography()
-        {
-            Default = new Default()
-            {
-                FontFamily = new[] { "Montserrat", "Roboto", "Helvetica", "Arial", "sans-serif" },
-                FontSize = ".875rem",
-                FontWeight = 400,
-                LineHeight = 1.43,
-                LetterSpacing = ".01071em"
-            }
-        }
-
-    };
-
-    MudTheme DarkMode = new MudTheme()
-    {
-        Palette = new Palette()
-        {
-            Black = "#27272f",
-            Background = "#32333d",
-            BackgroundGrey = "#27272f",
-            Surface = "#373740",
-            DrawerBackground = "#27272f",
-            DrawerText = "rgba(255,255,255, 0.50)",
-            DrawerIcon = "rgba(255,255,255, 0.50)",
-            AppbarBackground = "#27272f",
-            AppbarText = "rgba(255,255,255, 0.10)",
-            TextPrimary = "#FFFFFF",
-            TextSecondary = "rgba(255,255,255, 0.50)",
-            ActionDefault = "#adadb1",
-            ActionDisabled = "rgba(255,255,255, 0.26)",
-            ActionDisabledBackground = "rgba(255,255,255, 0.12)",
-            Divider = "rgba(255,255,255, 0.12)",
-            DividerLight = "rgba(255,255,255, 0.06)",
-            TableLines = "rgba(255,255,255, 0.12)",
-            LinesDefault = "rgba(255,255,255, 0.12)",
-            LinesInputs = "rgba(255,255,255, 0.3)",
-            TextDisabled = "rgba(255,255,255, 0.2)",
-            Primary = "#2878f7"
-        },
-
-        Typography = new Typography()
-        {
-            Default = new Default()
-            {
-                FontFamily = new[] { "Montserrat", "Roboto", "Helvetica", "Arial", "sans-serif" },
-                FontSize = ".875rem",
-                FontWeight = 400,
-                LineHeight = 1.43,
-                LetterSpacing = ".01071em"
-            }
-        }
-
-
-
-    };
-
-
-
-#line default
-#line hidden
-#nullable disable
     }
 }
 #pragma warning restore 1591

@@ -17,5 +17,6 @@
     <PackageReference Include="Syncfusion.Blazor.Layouts" Version="19.1.0.67"/>
     <PackageReference Include="Syncfusion.Blazor.Navigations" Version="19.1.0.67"/>
     <PackageReference Include="Syncfusion.Blazor.Schedule" Version="19.1.0.67"/>
+    <PackageReference Include="Syncfusion.Blazor.TreeGrid" Version="19.1.0.67"/>
   </ItemGroup>
 </Project>

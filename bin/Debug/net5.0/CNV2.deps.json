@@ -43,6 +43,7 @@
           "Syncfusion.Blazor.Layouts": "19.1.0.67",
           "Syncfusion.Blazor.Navigations": "19.1.0.67",
           "Syncfusion.Blazor.Schedule": "19.1.0.67",
+          "Syncfusion.Blazor.TreeGrid": "19.1.0.67",
           "Microsoft.AspNetCore.Antiforgery": "5.0.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "5.0.0.0",
           "Microsoft.AspNetCore.Authentication.Cookies": "5.0.0.0",
@@ -952,6 +953,30 @@
           "lib/net5.0/Syncfusion.Blazor.DropDowns.dll": {}
         }
       },
+      "Syncfusion.Blazor.Grid/19.1.0.67": {
+        "dependencies": {
+          "Syncfusion.Blazor.Buttons": "19.1.0.67",
+          "Syncfusion.Blazor.Calendars": "19.1.0.67",
+          "Syncfusion.Blazor.Core": "19.1.0.67",
+          "Syncfusion.Blazor.Data": "19.1.0.67",
+          "Syncfusion.Blazor.DropDowns": "19.1.0.67",
+          "Syncfusion.Blazor.Inputs": "19.1.0.67",
+          "Syncfusion.Blazor.Navigations": "19.1.0.67",
+          "Syncfusion.Blazor.Popups": "19.1.0.67",
+          "Syncfusion.Blazor.Spinner": "19.1.0.67",
+          "Syncfusion.ExcelExport.Net.Core": "19.1.0.67",
+          "Syncfusion.PdfExport.Net.Core": "19.1.0.67"
+        },
+        "runtime": {
+          "lib/net5.0/Syncfusion.Blazor.Grids.dll": {
+            "assemblyVersion": "19.1.0.67",
+            "fileVersion": "19.1.0.67"
+          }
+        },
+        "compile": {
+          "lib/net5.0/Syncfusion.Blazor.Grids.dll": {}
+        }
+      },
       "Syncfusion.Blazor.Inputs/19.1.0.67": {
         "dependencies": {
           "Syncfusion.Blazor.Core": "19.1.0.67",
@@ -1100,6 +1125,25 @@
           "lib/net5.0/Syncfusion.Blazor.Themes.dll": {}
         }
       },
+      "Syncfusion.Blazor.TreeGrid/19.1.0.67": {
+        "dependencies": {
+          "Syncfusion.Blazor.Core": "19.1.0.67",
+          "Syncfusion.Blazor.Data": "19.1.0.67",
+          "Syncfusion.Blazor.Grid": "19.1.0.67",
+          "Syncfusion.Blazor.Navigations": "19.1.0.67",
+          "Syncfusion.Blazor.Popups": "19.1.0.67",
+          "Syncfusion.Blazor.Spinner": "19.1.0.67"
+        },
+        "runtime": {
+          "lib/net5.0/Syncfusion.Blazor.TreeGrid.dll": {
+            "assemblyVersion": "19.1.0.67",
+            "fileVersion": "19.1.0.67"
+          }
+        },
+        "compile": {
+          "lib/net5.0/Syncfusion.Blazor.TreeGrid.dll": {}
+        }
+      },
       "Syncfusion.ExcelExport.Net.Core/19.1.0.67": {
         "dependencies": {
           "NETStandard.Library": "2.0.0"
@@ -1123,6 +1167,20 @@
         },
         "compile": {
           "lib/net5.0/Syncfusion.Licensing.dll": {}
+        }
+      },
+      "Syncfusion.PdfExport.Net.Core/19.1.0.67": {
+        "dependencies": {
+          "NETStandard.Library": "2.0.0"
+        },
+        "runtime": {
+          "lib/net5.0/Syncfusion.PdfExport.Net.dll": {
+            "assemblyVersion": "19.1.0.67",
+            "fileVersion": "19.1.0.67"
+          }
+        },
+        "compile": {
+          "lib/net5.0/Syncfusion.PdfExport.Net.dll": {}
         }
       },
       "System.Collections.Immutable/5.0.0": {
@@ -3137,6 +3195,13 @@
       "path": "syncfusion.blazor.dropdowns/19.1.0.67",
       "hashPath": "syncfusion.blazor.dropdowns.19.1.0.67.nupkg.sha512"
     },
+    "Syncfusion.Blazor.Grid/19.1.0.67": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Yyab8Nnu5lV4vfX4eCVZvlgLBsLnaEFIbHf6SUWO68lOJ6TuXwxR8O13ym0io8/XOw5Ze/zRBc8ejzebc1OWFg==",
+      "path": "syncfusion.blazor.grid/19.1.0.67",
+      "hashPath": "syncfusion.blazor.grid.19.1.0.67.nupkg.sha512"
+    },
     "Syncfusion.Blazor.Inputs/19.1.0.67": {
       "type": "package",
       "serviceable": true,
@@ -3200,6 +3265,13 @@
       "path": "syncfusion.blazor.themes/19.1.0.67",
       "hashPath": "syncfusion.blazor.themes.19.1.0.67.nupkg.sha512"
     },
+    "Syncfusion.Blazor.TreeGrid/19.1.0.67": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-09rvbycYiEillnBL/n7eaJAh9RdZiI1POdX3iiIRm+0hUlT9jG55ahzLrFlW2+BOIdLAYRWkNnMmvNNTFT6BGA==",
+      "path": "syncfusion.blazor.treegrid/19.1.0.67",
+      "hashPath": "syncfusion.blazor.treegrid.19.1.0.67.nupkg.sha512"
+    },
     "Syncfusion.ExcelExport.Net.Core/19.1.0.67": {
       "type": "package",
       "serviceable": true,
@@ -3213,6 +3285,13 @@
       "sha512": "sha512-4cdYZvWDJvKLJR2C72KBFODhV/yYW71lW+w7QZL6/kMVlw/Cq71xJLWUU9jZGa2DeB+NA46g1o7gqPdy5Gan0g==",
       "path": "syncfusion.licensing/19.1.0.67",
       "hashPath": "syncfusion.licensing.19.1.0.67.nupkg.sha512"
+    },
+    "Syncfusion.PdfExport.Net.Core/19.1.0.67": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-bDL+urBR4iU31o+QS8H1CLoCyBmo1e70XeW/YpLU6IUnf4wXJ62ta/QESZz5Nw/9lIi76gm/mEYfwQLVBLbtww==",
+      "path": "syncfusion.pdfexport.net.core/19.1.0.67",
+      "hashPath": "syncfusion.pdfexport.net.core.19.1.0.67.nupkg.sha512"
     },
     "System.Collections.Immutable/5.0.0": {
       "type": "package",
