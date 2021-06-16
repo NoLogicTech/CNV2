@@ -1,0 +1,80 @@
+<h3>Lista de Tarefas</h3>
+
+<MudItem xs="12" md="6">
+    <MudText Typo="Typo.h6" GutterBottom="true">Text only</MudText>
+    <MudPaper Width="100%">
+        <MudList Clickable="true" Dense="true">
+            <MudListItem>
+                <MudCheckBox @bind-Checked="@Basic_CheckBox1" Color="Color.Primary"></MudCheckBox>
+                <MudItem xs="12" sm="6" md="4">
+                    <MudTextField @bind-Value="TextValue" DisableUnderLine Margin="Margin.Dense" style="">
+                    </MudTextField>
+                </MudItem>
+                <MudChip Icon="@Icons.Material.Filled.Person" Color="Color.Primary">Miguel Correia</MudChip>
+                <MudChip Color="Color.Error">Urgente</MudChip>
+            </MudListItem>
+            <MudDivider />
+
+        </MudList>
+    </MudPaper>
+</MudItem>
+<MudDivider />
+<MudPaper Width="50%">
+    <MudText Typo="Typo.h6">Agroaguiar - Agroindústria, S.A. | SI Inovação | N.º71201</MudText>
+    <MudTreeView Items="@TreeItems" MaxHeight="500px" Width="600px">
+        <ItemTemplate>
+            <MudTreeViewItem @bind-Expanded="@context.IsExpanded" Items="@context.TreeItems" style="font-weight: 800;">
+                <Content>
+                    <MudPaper Width="50%">
+                        <MudCheckBox @bind-Checked="@Basic_CheckBox1" Color="Color.Primary"></MudCheckBox>
+                        <MudTreeViewItemToggleButton @bind-Expanded="@context.IsExpanded" Visible="@context.HasChild" />
+                        <MudText>@context.Text</MudText>
+                        <MudChip Icon="@Icons.Material.Filled.Person" Color="Color.Primary">Miguel Correia</MudChip>
+                        <MudChip Color="Color.Error">Urgente</MudChip>
+                    </MudPaper>
+                </Content>
+            </MudTreeViewItem>
+        </ItemTemplate>
+    </MudTreeView>
+</MudPaper>
+
+@code {
+
+    private HashSet<TreeItemData> TreeItems { get; set; } = new HashSet<TreeItemData>();
+
+    public class TreeItemData
+    {
+        public string Text { get; set; }
+
+        public bool IsExpanded { get; set; } = true;
+
+        public bool HasChild => TreeItems != null && TreeItems.Count > 0;
+
+        public HashSet<TreeItemData> TreeItems { get; set; } = new HashSet<TreeItemData>();
+
+        public TreeItemData(string text)
+        {
+            Text = text;
+        }
+    }
+
+    protected override void OnInitialized()
+    {
+        TreeItems.Add(new TreeItemData("Contratação")
+        {
+            TreeItems = new HashSet<TreeItemData>()
+{
+new TreeItemData("Solicitar comprovativo de NIB"),
+new TreeItemData("Pedir data de inicio"),
+new TreeItemData("Questionar adiantamento")
+{
+
+},
+}
+        });
+
+    }
+    public bool Basic_CheckBox1 { get; set; } = true;
+    public string TextValue { get; set; } = "Pedido de esclarecimentos";
+    DateTime? date = DateTime.Today;
+}

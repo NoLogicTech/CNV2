@@ -4,7 +4,7 @@
 #pragma warning disable 0649
 #pragma warning disable 0169
 
-namespace CNV2.Shared
+namespace CNV2.Pages.Tabelas.Clientes
 {
     #line hidden
     using System;
@@ -124,7 +124,22 @@ using Syncfusion.Blazor.Schedule;
 #line default
 #line hidden
 #nullable disable
-    public partial class MainLayout : LayoutComponentBase
+#nullable restore
+#line 2 "C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\Pages\Tabelas\Clientes\TCliente.razor"
+using System.Text.RegularExpressions;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 3 "C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\Pages\Tabelas\Clientes\TCliente.razor"
+using System.ComponentModel.DataAnnotations;
+
+#line default
+#line hidden
+#nullable disable
+    [Microsoft.AspNetCore.Components.RouteAttribute("/tcliente")]
+    public partial class TCliente : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -132,74 +147,11 @@ using Syncfusion.Blazor.Schedule;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 20 "C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\Shared\MainLayout.razor"
+#line 27 "C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\Pages\Tabelas\Clientes\TCliente.razor"
        
-    MudTheme ADN = new MudTheme()
-    {
-        Palette = new Palette()
-        {
-            Primary = "#2878f7",
-            AppbarBackground = "#FFFFFF",
-            Background = "rgba(246,246,246, 1)"
-        },
-
-        Typography = new Typography()
-        {
-            Default = new Default()
-            {
-                FontFamily = new[] { "Montserrat", "Roboto", "Helvetica", "Arial", "sans-serif" },
-                FontSize = ".875rem",
-                FontWeight = 400,
-                LineHeight = 1.43,
-                LetterSpacing = ".01071em"
-            }
-        }
-
-    };
-
-    MudTheme DarkMode = new MudTheme()
-    {
-        Palette = new Palette()
-        {
-            Black = "#27272f",
-            Background = "#32333d",
-            BackgroundGrey = "#27272f",
-            Surface = "#373740",
-            DrawerBackground = "#27272f",
-            DrawerText = "rgba(255,255,255, 0.50)",
-            DrawerIcon = "rgba(255,255,255, 0.50)",
-            AppbarBackground = "#27272f",
-            AppbarText = "rgba(255,255,255, 0.10)",
-            TextPrimary = "#FFFFFF",
-            TextSecondary = "rgba(255,255,255, 0.50)",
-            ActionDefault = "#adadb1",
-            ActionDisabled = "rgba(255,255,255, 0.26)",
-            ActionDisabledBackground = "rgba(255,255,255, 0.12)",
-            Divider = "rgba(255,255,255, 0.12)",
-            DividerLight = "rgba(255,255,255, 0.06)",
-            TableLines = "rgba(255,255,255, 0.12)",
-            LinesDefault = "rgba(255,255,255, 0.12)",
-            LinesInputs = "rgba(255,255,255, 0.3)",
-            TextDisabled = "rgba(255,255,255, 0.2)",
-            Primary = "#2878f7"
-        },
-
-        Typography = new Typography()
-        {
-            Default = new Default()
-            {
-                FontFamily = new[] { "Montserrat", "Roboto", "Helvetica", "Arial", "sans-serif" },
-                FontSize = ".875rem",
-                FontWeight = 400,
-                LineHeight = 1.43,
-                LetterSpacing = ".01071em"
-            }
-        }
-
-
-
-    };
-
+    bool success;
+    string[] errors = { };
+    MudForm form;
 
 
 #line default

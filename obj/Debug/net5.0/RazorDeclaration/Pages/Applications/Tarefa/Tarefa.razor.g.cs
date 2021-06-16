@@ -4,7 +4,7 @@
 #pragma warning disable 0649
 #pragma warning disable 0169
 
-namespace CNV2.Shared
+namespace CNV2.Pages.Applications.Tarefa
 {
     #line hidden
     using System;
@@ -124,7 +124,7 @@ using Syncfusion.Blazor.Schedule;
 #line default
 #line hidden
 #nullable disable
-    public partial class MainLayout : LayoutComponentBase
+    public partial class Tarefa : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -132,75 +132,46 @@ using Syncfusion.Blazor.Schedule;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 20 "C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\Shared\MainLayout.razor"
+#line 41 "C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\Pages\Applications\Tarefa\Tarefa.razor"
        
-    MudTheme ADN = new MudTheme()
+
+    private HashSet<TreeItemData> TreeItems { get; set; } = new HashSet<TreeItemData>();
+
+    public class TreeItemData
     {
-        Palette = new Palette()
-        {
-            Primary = "#2878f7",
-            AppbarBackground = "#FFFFFF",
-            Background = "rgba(246,246,246, 1)"
-        },
+        public string Text { get; set; }
 
-        Typography = new Typography()
+        public bool IsExpanded { get; set; } = true;
+
+        public bool HasChild => TreeItems != null && TreeItems.Count > 0;
+
+        public HashSet<TreeItemData> TreeItems { get; set; } = new HashSet<TreeItemData>();
+
+        public TreeItemData(string text)
         {
-            Default = new Default()
-            {
-                FontFamily = new[] { "Montserrat", "Roboto", "Helvetica", "Arial", "sans-serif" },
-                FontSize = ".875rem",
-                FontWeight = 400,
-                LineHeight = 1.43,
-                LetterSpacing = ".01071em"
-            }
+            Text = text;
         }
+    }
 
-    };
-
-    MudTheme DarkMode = new MudTheme()
+    protected override void OnInitialized()
     {
-        Palette = new Palette()
+        TreeItems.Add(new TreeItemData("Contratação")
         {
-            Black = "#27272f",
-            Background = "#32333d",
-            BackgroundGrey = "#27272f",
-            Surface = "#373740",
-            DrawerBackground = "#27272f",
-            DrawerText = "rgba(255,255,255, 0.50)",
-            DrawerIcon = "rgba(255,255,255, 0.50)",
-            AppbarBackground = "#27272f",
-            AppbarText = "rgba(255,255,255, 0.10)",
-            TextPrimary = "#FFFFFF",
-            TextSecondary = "rgba(255,255,255, 0.50)",
-            ActionDefault = "#adadb1",
-            ActionDisabled = "rgba(255,255,255, 0.26)",
-            ActionDisabledBackground = "rgba(255,255,255, 0.12)",
-            Divider = "rgba(255,255,255, 0.12)",
-            DividerLight = "rgba(255,255,255, 0.06)",
-            TableLines = "rgba(255,255,255, 0.12)",
-            LinesDefault = "rgba(255,255,255, 0.12)",
-            LinesInputs = "rgba(255,255,255, 0.3)",
-            TextDisabled = "rgba(255,255,255, 0.2)",
-            Primary = "#2878f7"
-        },
+            TreeItems = new HashSet<TreeItemData>()
+{
+new TreeItemData("Solicitar comprovativo de NIB"),
+new TreeItemData("Pedir data de inicio"),
+new TreeItemData("Questionar adiantamento")
+{
 
-        Typography = new Typography()
-        {
-            Default = new Default()
-            {
-                FontFamily = new[] { "Montserrat", "Roboto", "Helvetica", "Arial", "sans-serif" },
-                FontSize = ".875rem",
-                FontWeight = 400,
-                LineHeight = 1.43,
-                LetterSpacing = ".01071em"
-            }
-        }
+},
+}
+        });
 
-
-
-    };
-
-
+    }
+    public bool Basic_CheckBox1 { get; set; } = true;
+    public string TextValue { get; set; } = "Pedido de esclarecimentos";
+    DateTime? date = DateTime.Today;
 
 #line default
 #line hidden

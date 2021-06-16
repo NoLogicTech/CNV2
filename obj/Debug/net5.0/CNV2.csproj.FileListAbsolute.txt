@@ -67,7 +67,6 @@ C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\obj\Debug\net5.0\CNV2.RazorComp
 C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\obj\Debug\net5.0\RazorDeclaration\App.razor.g.cs
 C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\obj\Debug\net5.0\RazorDeclaration\Pages\Counter.razor.g.cs
 C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\obj\Debug\net5.0\RazorDeclaration\Pages\FetchData.razor.g.cs
-C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\obj\Debug\net5.0\RazorDeclaration\Pages\Index.razor.g.cs
 C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\obj\Debug\net5.0\RazorDeclaration\Shared\LoginDisplay.razor.g.cs
 C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\obj\Debug\net5.0\RazorDeclaration\Shared\SurveyPrompt.razor.g.cs
 C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\obj\Debug\net5.0\RazorDeclaration\_Imports.razor.g.cs
@@ -81,7 +80,6 @@ C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\obj\Debug\net5.0\CNV2.RazorCore
 C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\obj\Debug\net5.0\Razor\App.razor.g.cs
 C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\obj\Debug\net5.0\Razor\Pages\Counter.razor.g.cs
 C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\obj\Debug\net5.0\Razor\Pages\FetchData.razor.g.cs
-C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\obj\Debug\net5.0\Razor\Pages\Index.razor.g.cs
 C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\obj\Debug\net5.0\Razor\Shared\LoginDisplay.razor.g.cs
 C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\obj\Debug\net5.0\Razor\Shared\SurveyPrompt.razor.g.cs
 C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\obj\Debug\net5.0\Razor\_Imports.razor.g.cs
@@ -109,10 +107,6 @@ C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\obj\Debug\net5.0\CNV2.pdb
 C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\obj\Debug\net5.0\CNV2.genruntimeconfig.cache
 C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\obj\Debug\net5.0\RazorDeclaration\Shared\TopMenu.razor.g.cs
 C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\obj\Debug\net5.0\Razor\Shared\TopMenu.razor.g.cs
-C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\obj\Debug\net5.0\RazorDeclaration\Pages\TCliente.razor.g.cs
-C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\obj\Debug\net5.0\Razor\Pages\TCliente.razor.g.cs
-C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\obj\Debug\net5.0\RazorDeclaration\Shared\TCliente_Table.razor.g.cs
-C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\obj\Debug\net5.0\Razor\Shared\TCliente_Table.razor.g.cs
 D:\Repositorios\CNV2\bin\Debug\net5.0\appsettings.Development.json
 D:\Repositorios\CNV2\bin\Debug\net5.0\appsettings.json
 D:\Repositorios\CNV2\bin\Debug\net5.0\app.db
@@ -245,3 +239,11 @@ C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\bin\Debug\net5.0\Syncfusion.Bla
 C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\bin\Debug\net5.0\Syncfusion.Blazor.DropDowns.dll
 C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\bin\Debug\net5.0\Syncfusion.Blazor.Schedule.dll
 C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\bin\Debug\net5.0\Syncfusion.ExcelExport.Net.dll
+C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\obj\Debug\net5.0\RazorDeclaration\Pages\Tabelas\Clientes\TCliente.razor.g.cs
+C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\obj\Debug\net5.0\Razor\Pages\Tabelas\Clientes\TCliente.razor.g.cs
+C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\obj\Debug\net5.0\RazorDeclaration\Pages\Applications\Tarefa\Tarefa.razor.g.cs
+C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\obj\Debug\net5.0\Razor\Pages\Applications\Tarefa\Tarefa.razor.g.cs
+C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\obj\Debug\net5.0\RazorDeclaration\Pages\Applications\Tarefa\Index.razor.g.cs
+C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\obj\Debug\net5.0\RazorDeclaration\Pages\Tabelas\Clientes\TCliente_Table.razor.g.cs
+C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\obj\Debug\net5.0\Razor\Pages\Applications\Tarefa\Index.razor.g.cs
+C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\obj\Debug\net5.0\Razor\Pages\Tabelas\Clientes\TCliente_Table.razor.g.cs

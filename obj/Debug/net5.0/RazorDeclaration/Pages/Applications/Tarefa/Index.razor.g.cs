@@ -4,7 +4,7 @@
 #pragma warning disable 0649
 #pragma warning disable 0169
 
-namespace CNV2.Shared
+namespace CNV2.Pages.Applications.Tarefa
 {
     #line hidden
     using System;
@@ -124,62 +124,14 @@ using Syncfusion.Blazor.Schedule;
 #line default
 #line hidden
 #nullable disable
-#nullable restore
-#line 1 "C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\Shared\TCliente_Table.razor"
-using System.Net.Http.Json;
-
-#line default
-#line hidden
-#nullable disable
-#nullable restore
-#line 2 "C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\Shared\TCliente_Table.razor"
-using MudBlazor.Examples.Data.Models;
-
-#line default
-#line hidden
-#nullable disable
-    public partial class TCliente_Table : Microsoft.AspNetCore.Components.ComponentBase
+    [Microsoft.AspNetCore.Components.RouteAttribute("/")]
+    public partial class Index : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
         {
         }
         #pragma warning restore 1998
-#nullable restore
-#line 31 "C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\Shared\TCliente_Table.razor"
-       
-    private bool dense = true;
-    private bool hover = true;
-    private bool striped = false;
-    private bool bordered = false;
-    private string searchString = "";
-    private Element selectedItem = null;
-    private HashSet<Element> selectedItems = new HashSet<Element>();
-
-    private IEnumerable<Element> Elements = new List<Element>();
-
-    protected override async Task OnInitializedAsync()
-    {
-        Elements = await httpClient.GetFromJsonAsync<List<Element>>("https://mudblazor.com/webapi/periodictable");
-    }
-
-    private bool FilterFunc(Element element)
-    {
-        if (string.IsNullOrWhiteSpace(searchString))
-            return true;
-        if (element.Sign.Contains(searchString, StringComparison.OrdinalIgnoreCase))
-            return true;
-        if (element.Name.Contains(searchString, StringComparison.OrdinalIgnoreCase))
-            return true;
-        if ($"{element.Number} {element.Position} {element.Molar}".Contains(searchString))
-            return true;
-        return false;
-    }
-
-#line default
-#line hidden
-#nullable disable
-        [global::Microsoft.AspNetCore.Components.InjectAttribute] private HttpClient httpClient { get; set; }
     }
 }
 #pragma warning restore 1591

@@ -4,7 +4,7 @@
 #pragma warning disable 0649
 #pragma warning disable 0169
 
-namespace CNV2.Pages
+namespace CNV2.Pages.Tabelas.Clientes
 {
     #line hidden
     using System;
@@ -124,8 +124,21 @@ using Syncfusion.Blazor.Schedule;
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/")]
-    public partial class Index : Microsoft.AspNetCore.Components.ComponentBase
+#nullable restore
+#line 1 "C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\Pages\Tabelas\Clientes\TCliente_Table.razor"
+using System.Net.Http.Json;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 2 "C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\Pages\Tabelas\Clientes\TCliente_Table.razor"
+using MudBlazor.Examples.Data.Models;
+
+#line default
+#line hidden
+#nullable disable
+    public partial class TCliente_Table : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -133,95 +146,40 @@ using Syncfusion.Blazor.Schedule;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 34 "C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\Pages\Index.razor"
+#line 31 "C:\Users\NoLogicTech\Documents\Repos\ASerio\CNV2\Pages\Tabelas\Clientes\TCliente_Table.razor"
        
-    public class MusicAlbum
+    private bool dense = true;
+    private bool hover = true;
+    private bool striped = false;
+    private bool bordered = false;
+    private string searchString = "";
+    private Element selectedItem = null;
+    private HashSet<Element> selectedItems = new HashSet<Element>();
+
+    private IEnumerable<Element> Elements = new List<Element>();
+
+    protected override async Task OnInitializedAsync()
     {
-        public int Id { get; set; }
-        public int? ParentId { get; set; }
-        public string Name { get; set; }
-        public bool Expanded { get; set; }
-        public bool? IsChecked { get; set; }
-        public bool HasChild { get; set; }
+        Elements = await httpClient.GetFromJsonAsync<List<Element>>("https://mudblazor.com/webapi/periodictable");
     }
-    List<MusicAlbum> Albums = new List<MusicAlbum>();
-    protected override void OnInitialized()
+
+    private bool FilterFunc(Element element)
     {
-        base.OnInitialized();
-        Albums.Add(new MusicAlbum
-        {
-            Id = 1,
-            Name = "Discover Music",
-            HasChild = true,
-        });
-        Albums.Add(new MusicAlbum
-        {
-            Id = 2,
-            ParentId = 1,
-            Name = "Hot Singles"
-        });
-        Albums.Add(new MusicAlbum
-        {
-            Id = 3,
-            ParentId = 1,
-            Name = "Rising Artists"
-        });
-        Albums.Add(new MusicAlbum
-        {
-            Id = 4,
-            ParentId = 1,
-            Name = "Live Music"
-        });
-        Albums.Add(new MusicAlbum
-        {
-            Id = 14,
-            HasChild = true,
-            Name = "MP3 Albums",
-            Expanded = true,
-            IsChecked = true
-        });
-        Albums.Add(new MusicAlbum
-        {
-            Id = 15,
-            ParentId = 14,
-            Name = "Rock"
-        });
-        Albums.Add(new MusicAlbum
-        {
-            Id = 16,
-            Name = "Gospel",
-            ParentId = 14,
-        });
-        Albums.Add(new MusicAlbum
-        {
-            Id = 17,
-            ParentId = 14,
-            Name = "Latin Music"
-        });
-        Albums.Add(new MusicAlbum
-        {
-            Id = 18,
-            ParentId = 14,
-            Name = "Jazz"
-        });
-    }
-    public class AppointmentData
-    {
-        public int Id { get; set; }
-        public string Subject { get; set; }
-        public string Location { get; set; }
-        public DateTime StartTime { get; set; }
-        public DateTime EndTime { get; set; }
-        public string Description { get; set; }
-        public bool IsAllDay { get; set; }
-        public string RecurrenceRule { get; set; }
-        public string RecurrenceException { get; set; }
-        public Nullable<int> RecurrenceID { get; set; }
+        if (string.IsNullOrWhiteSpace(searchString))
+            return true;
+        if (element.Sign.Contains(searchString, StringComparison.OrdinalIgnoreCase))
+            return true;
+        if (element.Name.Contains(searchString, StringComparison.OrdinalIgnoreCase))
+            return true;
+        if ($"{element.Number} {element.Position} {element.Molar}".Contains(searchString))
+            return true;
+        return false;
     }
 
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private HttpClient httpClient { get; set; }
     }
 }
 #pragma warning restore 1591
